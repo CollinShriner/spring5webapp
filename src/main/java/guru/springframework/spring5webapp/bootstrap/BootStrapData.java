@@ -41,7 +41,7 @@ public class BootStrapData implements CommandLineRunner {
         Book androidDev = new Book("Android Development", "56789");
         dawn.getBooks().add(androidDev);
         androidDev.getAuthors().add(dawn);
-        androidDev.setPublisher(oriely);
+//        androidDev.setPublisher(oriely);
 
         authorRepository.save(dawn);
 
@@ -52,10 +52,13 @@ public class BootStrapData implements CommandLineRunner {
         androidDev.setPublisher(oriely);
         oriely.getBooks().add(androidDev);
 
-        authorRepository.save(dawn);
+        ddd.setPublisher(oriely);
+        oriely.getBooks().add(ddd);
+
 
         publisherRepository.save(oriely);
         bookRepository.save(androidDev);
+        bookRepository.save(ddd);
 
 
 
